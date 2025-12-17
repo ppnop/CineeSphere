@@ -190,7 +190,7 @@ class page_aucun_res(ctk.CTkFrame):
 def rechercher(recherche):
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1N2UwNGFmY2RhZjQ4YjFhNzRkZWU2NjhmM2I2MGI2ZCIsIm5iZiI6MTc2NTM2MTc4OS4zMTUsInN1YiI6IjY5Mzk0ODdkZWI1NTU3YTBmOTYzODk0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Bcks3_kzQgu3JKD8tcemayslelTPyJkDfI0c1t5sZa8"
+        "Authorization": "Bearer TOKEN"
     }
     
     searchfi = recherche.replace(" ", "+")
@@ -227,7 +227,7 @@ def rechercher(recherche):
 def get_ba(titre):
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1N2UwNGFmY2RhZjQ4YjFhNzRkZWU2NjhmM2I2MGI2ZCIsIm5iZiI6MTc2NTM2MTc4OS4zMTUsInN1YiI6IjY5Mzk0ODdkZWI1NTU3YTBmOTYzODk0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Bcks3_kzQgu3JKD8tcemayslelTPyJkDfI0c1t5sZa8"
+        "Authorization": "Bearer TOKEN"
     }
 
     searchfi = titre.replace(" ", "+")
@@ -257,7 +257,7 @@ def get_ba(titre):
 def get_films_tendances():
     headers = {
     "accept": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1N2UwNGFmY2RhZjQ4YjFhNzRkZWU2NjhmM2I2MGI2ZCIsIm5iZiI6MTc2NTM2MTc4OS4zMTUsInN1YiI6IjY5Mzk0ODdkZWI1NTU3YTBmOTYzODk0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Bcks3_kzQgu3JKD8tcemayslelTPyJkDfI0c1t5sZa8"
+    "Authorization": "Bearer TOKEN"
     }
     url = "https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=1"
     reponse = requests.get(url, headers=headers, verify = False)
@@ -290,7 +290,7 @@ def get_films_tendances():
 def get_series_tendances():
     headers = {
     "accept": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1N2UwNGFmY2RhZjQ4YjFhNzRkZWU2NjhmM2I2MGI2ZCIsIm5iZiI6MTc2NTM2MTc4OS4zMTUsInN1YiI6IjY5Mzk0ODdkZWI1NTU3YTBmOTYzODk0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Bcks3_kzQgu3JKD8tcemayslelTPyJkDfI0c1t5sZa8"
+    "Authorization": "Bearer TOKEN"
     }
     url = "https://api.themoviedb.org/3/tv/popular?language=fr-FR&page=1"
     reponse = requests.get(url, headers=headers, verify = False)
@@ -327,3 +327,4 @@ def get_series_tendances():
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
