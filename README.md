@@ -1,4 +1,4 @@
-# 🎬 CinéSphere
+# CinéSphere
 
 > Application Python développée dans le cadre d'un projet de NSI exploitant une API REST pour rechercher et afficher des films et séries populaires.
 
